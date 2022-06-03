@@ -12,4 +12,6 @@
     <a href="{{ route('records.edit', $record) }}">Edit</a>
 </div>
 @endforeach
+<div class="ct-chart ct-perfect-fourth mt-5"></div>
+
 @endsection

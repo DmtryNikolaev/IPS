@@ -16,6 +16,7 @@ class RecordController extends Controller
     public function index()
     {
         $records = Record::all();
+
         return view('record.index', compact('records'));
     }
 
@@ -39,7 +40,7 @@ class RecordController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request, [
-            'date' => 'required',
+            'date' => 'required|date',
             'value' => 'required'
         ]);
 
@@ -83,7 +84,7 @@ class RecordController extends Controller
     public function update(Request $request, Record $record)
     {
         $data = $this->validate($request, [
-            'date' => 'required',
+            'date' => 'required|date',
             'value' => 'required'
         ]);
 
